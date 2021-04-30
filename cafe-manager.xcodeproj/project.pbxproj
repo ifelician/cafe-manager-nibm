@@ -3,27 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A93CE656A53BC7EC4AA05DA /* Pods_cafe_manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1A2658048C73F9886712EF /* Pods_cafe_manager.framework */; };
 		A6104314263B18D90096E67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6104313263B18D90096E67E /* AppDelegate.swift */; };
 		A6104316263B18D90096E67E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6104315263B18D90096E67E /* SceneDelegate.swift */; };
-		A6104318263B18D90096E67E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6104317263B18D90096E67E /* ViewController.swift */; };
 		A610431B263B18D90096E67E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6104319263B18D90096E67E /* Main.storyboard */; };
 		A610431D263B18DA0096E67E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A610431C263B18DA0096E67E /* Assets.xcassets */; };
 		A6104320263B18DA0096E67E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A610431E263B18DA0096E67E /* LaunchScreen.storyboard */; };
+		A6104334263B1FDC0096E67E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6104333263B1FDC0096E67E /* GoogleService-Info.plist */; };
+		A67FFAE6263B7B3800723C85 /* StoreRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67FFAE5263B7B3800723C85 /* StoreRootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E1A2658048C73F9886712EF /* Pods_cafe_manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cafe_manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57E3D8C6A03EC7FD642B89E2 /* Pods-cafe-manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cafe-manager.debug.xcconfig"; path = "Target Support Files/Pods-cafe-manager/Pods-cafe-manager.debug.xcconfig"; sourceTree = "<group>"; };
 		A6104310263B18D90096E67E /* cafe-manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cafe-manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6104313263B18D90096E67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6104315263B18D90096E67E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A6104317263B18D90096E67E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A610431A263B18D90096E67E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A610431C263B18DA0096E67E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A610431F263B18DA0096E67E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6104321263B18DA0096E67E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6104333263B1FDC0096E67E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A67FFAE5263B7B3800723C85 /* StoreRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRootViewController.swift; sourceTree = "<group>"; };
+		D1EC080530F6FC56AC0F43D7 /* Pods-cafe-manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cafe-manager.release.xcconfig"; path = "Target Support Files/Pods-cafe-manager/Pods-cafe-manager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A93CE656A53BC7EC4AA05DA /* Pods_cafe_manager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		143A66DD9B880A7CBFC7B957 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E1A2658048C73F9886712EF /* Pods_cafe_manager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A6104307263B18D80096E67E = {
 			isa = PBXGroup;
 			children = (
 				A6104312263B18D90096E67E /* cafe-manager */,
 				A6104311263B18D90096E67E /* Products */,
+				F5E7AEA40E0382BB1EA406FC /* Pods */,
+				143A66DD9B880A7CBFC7B957 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +73,57 @@
 		A6104312263B18D90096E67E /* cafe-manager */ = {
 			isa = PBXGroup;
 			children = (
+				A6104339263B231C0096E67E /* Controller */,
+				A6104338263B23170096E67E /* View */,
+				A6104337263B230F0096E67E /* Model */,
 				A6104313263B18D90096E67E /* AppDelegate.swift */,
 				A6104315263B18D90096E67E /* SceneDelegate.swift */,
-				A6104317263B18D90096E67E /* ViewController.swift */,
-				A6104319263B18D90096E67E /* Main.storyboard */,
 				A610431C263B18DA0096E67E /* Assets.xcassets */,
 				A610431E263B18DA0096E67E /* LaunchScreen.storyboard */,
 				A6104321263B18DA0096E67E /* Info.plist */,
+				A6104333263B1FDC0096E67E /* GoogleService-Info.plist */,
 			);
 			path = "cafe-manager";
+			sourceTree = "<group>";
+		};
+		A6104337263B230F0096E67E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A6104338263B23170096E67E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A6104319263B18D90096E67E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A6104339263B231C0096E67E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A67FFAE0263B76AB00723C85 /* Store */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A67FFAE0263B76AB00723C85 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				A67FFAE5263B7B3800723C85 /* StoreRootViewController.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		F5E7AEA40E0382BB1EA406FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57E3D8C6A03EC7FD642B89E2 /* Pods-cafe-manager.debug.xcconfig */,
+				D1EC080530F6FC56AC0F43D7 /* Pods-cafe-manager.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +133,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6104324263B18DA0096E67E /* Build configuration list for PBXNativeTarget "cafe-manager" */;
 			buildPhases = (
+				5602A651543E82FC98C20327 /* [CP] Check Pods Manifest.lock */,
 				A610430C263B18D90096E67E /* Sources */,
 				A610430D263B18D90096E67E /* Frameworks */,
 				A610430E263B18D90096E67E /* Resources */,
+				8354787C4568397F5665E27F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,20 +187,63 @@
 			files = (
 				A6104320263B18DA0096E67E /* LaunchScreen.storyboard in Resources */,
 				A610431D263B18DA0096E67E /* Assets.xcassets in Resources */,
+				A6104334263B1FDC0096E67E /* GoogleService-Info.plist in Resources */,
 				A610431B263B18D90096E67E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5602A651543E82FC98C20327 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cafe-manager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8354787C4568397F5665E27F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cafe-manager/Pods-cafe-manager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cafe-manager/Pods-cafe-manager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cafe-manager/Pods-cafe-manager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A610430C263B18D90096E67E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6104318263B18D90096E67E /* ViewController.swift in Sources */,
 				A6104314263B18D90096E67E /* AppDelegate.swift in Sources */,
 				A6104316263B18D90096E67E /* SceneDelegate.swift in Sources */,
+				A67FFAE6263B7B3800723C85 /* StoreRootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +387,7 @@
 		};
 		A6104325263B18DA0096E67E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57E3D8C6A03EC7FD642B89E2 /* Pods-cafe-manager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +406,7 @@
 		};
 		A6104326263B18DA0096E67E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1EC080530F6FC56AC0F43D7 /* Pods-cafe-manager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
