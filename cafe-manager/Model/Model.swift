@@ -8,5 +8,6 @@
 import Foundation
 
 struct Category {
-    var vategoryName: String
+    var categoryID: String
+    var categoryName: String
 }

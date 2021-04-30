@@ -20,7 +20,9 @@ class CategoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        refreshCategories()
+        tblCategory.register(UINib(nibName: CategoryInfoTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: CategoryInfoTableViewCell.reuseIdentifier)
+        refreshCategories()
         // Do any additional setup after loading the view.
     }
    
@@ -53,13 +55,60 @@ extension CategoryViewController {
     }
     
     func refreshCategories(){
+        self.categoryList.removeAll()
         databaseReference
             .child("categories")
             .observeSingleEvent(of: .value, with: {
                 snapshot in
                 if snapshot.hasChildren(){
-                    print(snapshot.value)
+                    guard let data = snapshot.value as? [String: Any] else {
+                        return
+                    }
+                    for category in data {
+                        if let categoryInfo = category.value as? [String: String] {
+                            self.categoryList.append(Category(categoryID: category.key,categoryName: categoryInfo["name"]!))
+                        }
+                    }
+                    
+                    self.tblCategory.reloadData()
                 }
             })
     }
+    
+    func removeCategory(category: Category){
+        databaseReference
+            .child("categories")
+            .child(category.categoryID)
+            .removeValue(){
+                error, databaseReference in
+                if error != nil {
+                    Loaf("Could not remove category.", state: .error, sender: self).show()
+                }
+                else{
+                    Loaf("Category Removed", state: .success, sender: self).show()
+                    self.refreshCategories()
+                }
+            }
+    }
+}
+
+extension CategoryViewController: UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.categoryList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tblCategory.dequeueReusableCell(withIdentifier: CategoryInfoTableViewCell.reuseIdentifier, for: indexPath) as! CategoryInfoTableViewCell; cell.selectionStyle = .none
+        cell.configXIB(category: self.categoryList[indexPath.row])
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.removeCategory(category: categoryList[indexPath.row])
+            refreshCategories()
+        }
+    }
+    
+    
 }

@@ -50,9 +50,13 @@
                                     <action selector="onAddCategoryPressed:" destination="yKl-3u-t5g" eventType="touchUpInside" id="9Em-Ht-fxY"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TqO-gE-RU6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TqO-gE-RU6">
                                 <rect key="frame" x="10" y="139.5" width="315" height="338.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="yKl-3u-t5g" id="eTo-YK-hWv"/>
+                                    <outlet property="delegate" destination="yKl-3u-t5g" id="5jc-4x-mg0"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XyF-UG-Bxl"/>

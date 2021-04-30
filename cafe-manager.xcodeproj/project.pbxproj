@@ -19,6 +19,8 @@
 		A67FFB09263C49F400723C85 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67FFB08263C49F400723C85 /* CategoryViewController.swift */; };
 		A67FFB0C263C4A0B00723C85 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67FFB0B263C4A0B00723C85 /* MenuViewController.swift */; };
 		A67FFB0F263C52EA00723C85 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67FFB0E263C52EA00723C85 /* Model.swift */; };
+		A67FFB14263C616200723C85 /* CategoryInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67FFB12263C616200723C85 /* CategoryInfoTableViewCell.swift */; };
+		A67FFB15263C616200723C85 /* CategoryInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A67FFB13263C616200723C85 /* CategoryInfoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		A67FFB08263C49F400723C85 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		A67FFB0B263C4A0B00723C85 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		A67FFB0E263C52EA00723C85 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A67FFB12263C616200723C85 /* CategoryInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInfoTableViewCell.swift; sourceTree = "<group>"; };
+		A67FFB13263C616200723C85 /* CategoryInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryInfoTableViewCell.xib; sourceTree = "<group>"; };
 		D1EC080530F6FC56AC0F43D7 /* Pods-cafe-manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cafe-manager.release.xcconfig"; path = "Target Support Files/Pods-cafe-manager/Pods-cafe-manager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +109,7 @@
 		A6104338263B23170096E67E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A67FFB11263C60F700723C85 /* XIB */,
 				A6104319263B18D90096E67E /* Main.storyboard */,
 			);
 			path = View;
@@ -127,6 +132,15 @@
 				A67FFB0B263C4A0B00723C85 /* MenuViewController.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		A67FFB11263C60F700723C85 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				A67FFB12263C616200723C85 /* CategoryInfoTableViewCell.swift */,
+				A67FFB13263C616200723C85 /* CategoryInfoTableViewCell.xib */,
+			);
+			path = XIB;
 			sourceTree = "<group>";
 		};
 		F5E7AEA40E0382BB1EA406FC /* Pods */ = {
@@ -199,6 +213,7 @@
 			files = (
 				A6104320263B18DA0096E67E /* LaunchScreen.storyboard in Resources */,
 				A610431D263B18DA0096E67E /* Assets.xcassets in Resources */,
+				A67FFB15263C616200723C85 /* CategoryInfoTableViewCell.xib in Resources */,
 				A6104334263B1FDC0096E67E /* GoogleService-Info.plist in Resources */,
 				A610431B263B18D90096E67E /* Main.storyboard in Resources */,
 			);
@@ -260,6 +275,7 @@
 				A6104316263B18D90096E67E /* SceneDelegate.swift in Sources */,
 				A67FFAE6263B7B3800723C85 /* StoreRootViewController.swift in Sources */,
 				A67FFB06263C49DB00723C85 /* PreviewViewController.swift in Sources */,
+				A67FFB14263C616200723C85 /* CategoryInfoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
