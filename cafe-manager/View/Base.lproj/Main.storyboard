@@ -27,7 +27,7 @@
         <!--Item 2-->
         <scene sceneID="pss-QC-7sZ">
             <objects>
-                <viewController id="yKl-3u-t5g" sceneMemberID="viewController">
+                <viewController id="yKl-3u-t5g" customClass="CategoryViewController" customModule="cafe_manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xZL-Hh-saK">
                         <rect key="frame" x="0.0" y="0.0" width="335" height="537"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,6 +46,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGZ-Q6-8C0">
                                 <rect key="frame" x="120" y="99.5" width="95" height="30"/>
                                 <state key="normal" title="Add Category"/>
+                                <connections>
+                                    <action selector="onAddCategoryPressed:" destination="yKl-3u-t5g" eventType="touchUpInside" id="9Em-Ht-fxY"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TqO-gE-RU6">
                                 <rect key="frame" x="10" y="139.5" width="315" height="338.5"/>
@@ -69,6 +72,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="uC3-5d-Vex"/>
+                    <connections>
+                        <outlet property="tblCategory" destination="TqO-gE-RU6" id="bwx-wI-gGZ"/>
+                        <outlet property="txtCategoryName" destination="CWe-aJ-SJt" id="DkQ-ba-7c7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxQ-E1-aCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -88,46 +95,67 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w7N-5d-4g6">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w7N-5d-4g6">
                                 <rect key="frame" x="16" y="68" width="295" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UqR-Vx-dpQ">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UqR-Vx-dpQ">
                                 <rect key="frame" x="16" y="118" width="295" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hvg-GS-dJJ">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hvg-GS-dJJ">
                                 <rect key="frame" x="16" y="167" width="295" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food Discount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISr-ji-x6T">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food Discount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ISr-ji-x6T">
                                 <rect key="frame" x="16" y="216" width="295" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L00-7u-Yf1">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L00-7u-Yf1">
                                 <rect key="frame" x="16" y="264" width="295" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ONA-Di-azE">
-                                <rect key="frame" x="111" y="320" width="105" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ONA-Di-azE">
+                                <rect key="frame" x="100" y="320" width="135" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="ekK-20-8eb"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZF-EW-jSS">
+                                <rect key="frame" x="118" y="442" width="99" height="30"/>
+                                <state key="normal" title="Sell as an Item"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Mw-lv-Tz6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="L00-7u-Yf1" firstAttribute="leading" secondItem="Fnu-qa-r04" secondAttribute="leadingMargin" id="0yt-r5-In1"/>
+                            <constraint firstItem="L00-7u-Yf1" firstAttribute="top" secondItem="ISr-ji-x6T" secondAttribute="bottom" constant="14" id="2Kj-Dy-yhB"/>
+                            <constraint firstItem="L00-7u-Yf1" firstAttribute="trailing" secondItem="w7N-5d-4g6" secondAttribute="trailing" id="4At-DO-0mX"/>
+                            <constraint firstItem="L00-7u-Yf1" firstAttribute="leading" secondItem="UqR-Vx-dpQ" secondAttribute="leading" id="4Gt-g9-BCT"/>
+                            <constraint firstItem="L00-7u-Yf1" firstAttribute="trailing" secondItem="UqR-Vx-dpQ" secondAttribute="trailing" id="59n-di-vBg"/>
+                            <constraint firstItem="fZF-EW-jSS" firstAttribute="top" secondItem="ONA-Di-azE" secondAttribute="bottom" constant="23" id="9eD-xU-04o"/>
+                            <constraint firstItem="w7N-5d-4g6" firstAttribute="top" secondItem="b3G-ac-MQd" secondAttribute="bottom" constant="27.5" id="G0m-hb-vve"/>
+                            <constraint firstItem="hvg-GS-dJJ" firstAttribute="top" secondItem="UqR-Vx-dpQ" secondAttribute="bottom" constant="15" id="GMp-fy-Tp9"/>
+                            <constraint firstItem="L00-7u-Yf1" firstAttribute="trailing" secondItem="hvg-GS-dJJ" secondAttribute="trailing" id="Gbm-Hc-lTZ"/>
+                            <constraint firstItem="ONA-Di-azE" firstAttribute="leading" secondItem="3Mw-lv-Tz6" secondAttribute="leading" constant="100" id="J6h-2R-oQb"/>
+                            <constraint firstItem="3Mw-lv-Tz6" firstAttribute="trailing" secondItem="L00-7u-Yf1" secondAttribute="trailing" constant="24" id="K67-zl-UNt"/>
+                            <constraint firstItem="L00-7u-Yf1" firstAttribute="leading" secondItem="ISr-ji-x6T" secondAttribute="leading" id="TYq-aA-v1k"/>
+                            <constraint firstItem="UqR-Vx-dpQ" firstAttribute="top" secondItem="w7N-5d-4g6" secondAttribute="bottom" constant="16" id="Uky-as-Awq"/>
+                            <constraint firstItem="3Mw-lv-Tz6" firstAttribute="bottom" secondItem="fZF-EW-jSS" secondAttribute="bottom" constant="16" id="XFD-1s-gRv"/>
+                            <constraint firstItem="ONA-Di-azE" firstAttribute="top" secondItem="L00-7u-Yf1" secondAttribute="bottom" constant="22" id="Y9Z-BW-5vV"/>
                             <constraint firstItem="b3G-ac-MQd" firstAttribute="leading" secondItem="3Mw-lv-Tz6" secondAttribute="leading" constant="20" id="ZeY-DG-xlJ"/>
                             <constraint firstItem="b3G-ac-MQd" firstAttribute="top" secondItem="3Mw-lv-Tz6" secondAttribute="top" constant="20" id="jJw-AO-VVJ"/>
+                            <constraint firstItem="L00-7u-Yf1" firstAttribute="trailing" secondItem="ISr-ji-x6T" secondAttribute="trailing" id="qHb-Ao-eXu"/>
+                            <constraint firstItem="3Mw-lv-Tz6" firstAttribute="trailing" secondItem="ONA-Di-azE" secondAttribute="trailing" constant="100" id="sJc-ot-neD"/>
+                            <constraint firstItem="L00-7u-Yf1" firstAttribute="leading" secondItem="hvg-GS-dJJ" secondAttribute="leading" id="uHh-NW-3x4"/>
+                            <constraint firstItem="L00-7u-Yf1" firstAttribute="leading" secondItem="w7N-5d-4g6" secondAttribute="leading" id="vRv-0C-09f"/>
+                            <constraint firstItem="fZF-EW-jSS" firstAttribute="centerX" secondItem="ONA-Di-azE" secondAttribute="centerX" id="xul-Fg-Dxe"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Zvb-GH-cy1"/>
